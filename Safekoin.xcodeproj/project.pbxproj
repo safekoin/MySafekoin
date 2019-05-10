@@ -1,0 +1,667 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CFD23741C64E5C136035D5CF /* Pods_Safekoin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F251D85F745263F8664EE9 /* Pods_Safekoin.framework */; };
+		D20A060E228354DA005AD098 /* SafekoinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20A060D228354DA005AD098 /* SafekoinTableViewCell.swift */; };
+		D212DAEF228595B70014A6E1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D212DAEE228595B70014A6E1 /* DetailViewController.swift */; };
+		D2607F44227E49CB000DD099 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2607F43227E49CB000DD099 /* AppDelegate.swift */; };
+		D2607F49227E49CB000DD099 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2607F47227E49CB000DD099 /* Main.storyboard */; };
+		D2607F4C227E49CB000DD099 /* Safekoin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D2607F4A227E49CB000DD099 /* Safekoin.xcdatamodeld */; };
+		D2607F4E227E49CE000DD099 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2607F4D227E49CE000DD099 /* Assets.xcassets */; };
+		D2607F51227E49CE000DD099 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2607F4F227E49CE000DD099 /* LaunchScreen.storyboard */; };
+		D2607F6A227E4AB3000DD099 /* Safekoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2607F69227E4AB3000DD099 /* Safekoin.swift */; };
+		D2607F6C227E4BA9000DD099 /* SafekoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2607F6B227E4BA9000DD099 /* SafekoinViewController.swift */; };
+		D2607F73227E4FE8000DD099 /* SafekoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2607F72227E4FE8000DD099 /* SafekoinService.swift */; };
+		D2607F75227E508E000DD099 /* NomicsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2607F74227E508E000DD099 /* NomicsAPI.swift */; };
+		D2607F7B227E5204000DD099 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2607F7A227E5204000DD099 /* ViewModel.swift */; };
+		D2607F7F227E5299000DD099 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2607F7E227E5299000DD099 /* HomeViewController.swift */; };
+		D2607F8A227FA9BE000DD099 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2607F89227FA9BE000DD099 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D2607F58227E49CE000DD099 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2607F38227E49CB000DD099 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2607F3F227E49CB000DD099;
+			remoteInfo = Safekoin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		35C7A429A1E378886484AF57 /* Pods-Safekoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Safekoin.debug.xcconfig"; path = "Target Support Files/Pods-Safekoin/Pods-Safekoin.debug.xcconfig"; sourceTree = "<group>"; };
+		54F251D85F745263F8664EE9 /* Pods_Safekoin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Safekoin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		553334EB660E5C433887BACD /* Pods-Safekoin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Safekoin.release.xcconfig"; path = "Target Support Files/Pods-Safekoin/Pods-Safekoin.release.xcconfig"; sourceTree = "<group>"; };
+		D20A060D228354DA005AD098 /* SafekoinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafekoinTableViewCell.swift; sourceTree = "<group>"; };
+		D212DAEE228595B70014A6E1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D2607F40227E49CB000DD099 /* Safekoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Safekoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2607F43227E49CB000DD099 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D2607F48227E49CB000DD099 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D2607F4B227E49CB000DD099 /* Safekoin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Safekoin.xcdatamodel; sourceTree = "<group>"; };
+		D2607F4D227E49CE000DD099 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D2607F50227E49CE000DD099 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D2607F52227E49CE000DD099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2607F57227E49CE000DD099 /* SafekoinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SafekoinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2607F69227E4AB3000DD099 /* Safekoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Safekoin.swift; sourceTree = "<group>"; };
+		D2607F6B227E4BA9000DD099 /* SafekoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafekoinViewController.swift; sourceTree = "<group>"; };
+		D2607F72227E4FE8000DD099 /* SafekoinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafekoinService.swift; sourceTree = "<group>"; };
+		D2607F74227E508E000DD099 /* NomicsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomicsAPI.swift; sourceTree = "<group>"; };
+		D2607F7A227E5204000DD099 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		D2607F7E227E5299000DD099 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D2607F89227FA9BE000DD099 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2607F3D227E49CB000DD099 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFD23741C64E5C136035D5CF /* Pods_Safekoin.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2607F54227E49CE000DD099 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02A3BA3CC97762C35F96E2BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				35C7A429A1E378886484AF57 /* Pods-Safekoin.debug.xcconfig */,
+				553334EB660E5C433887BACD /* Pods-Safekoin.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D2607F37227E49CB000DD099 = {
+			isa = PBXGroup;
+			children = (
+				D2607F42227E49CB000DD099 /* Safekoin */,
+				D2607F41227E49CB000DD099 /* Products */,
+				02A3BA3CC97762C35F96E2BB /* Pods */,
+				DC5F0102C29BFBE2FD1E2442 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D2607F41227E49CB000DD099 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2607F40227E49CB000DD099 /* Safekoin.app */,
+				D2607F57227E49CE000DD099 /* SafekoinTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2607F42227E49CB000DD099 /* Safekoin */ = {
+			isa = PBXGroup;
+			children = (
+				D2607F66227E4A15000DD099 /* Model */,
+				D2607F68227E4A5F000DD099 /* View */,
+				D2607F67227E4A26000DD099 /* ViewModel */,
+				D2607F71227E4DC2000DD099 /* Service */,
+				D2607F43227E49CB000DD099 /* AppDelegate.swift */,
+				D2607F47227E49CB000DD099 /* Main.storyboard */,
+				D2607F4D227E49CE000DD099 /* Assets.xcassets */,
+				D2607F4F227E49CE000DD099 /* LaunchScreen.storyboard */,
+				D2607F52227E49CE000DD099 /* Info.plist */,
+				D2607F89227FA9BE000DD099 /* GoogleService-Info.plist */,
+				D2607F4A227E49CB000DD099 /* Safekoin.xcdatamodeld */,
+			);
+			path = Safekoin;
+			sourceTree = "<group>";
+		};
+		D2607F66227E4A15000DD099 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D2607F69227E4AB3000DD099 /* Safekoin.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D2607F67227E4A26000DD099 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D2607F7A227E5204000DD099 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D2607F68227E4A5F000DD099 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D2607F7E227E5299000DD099 /* HomeViewController.swift */,
+				D2607F6B227E4BA9000DD099 /* SafekoinViewController.swift */,
+				D20A060D228354DA005AD098 /* SafekoinTableViewCell.swift */,
+				D212DAEE228595B70014A6E1 /* DetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D2607F71227E4DC2000DD099 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D2607F74227E508E000DD099 /* NomicsAPI.swift */,
+				D2607F72227E4FE8000DD099 /* SafekoinService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DC5F0102C29BFBE2FD1E2442 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54F251D85F745263F8664EE9 /* Pods_Safekoin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D2607F3F227E49CB000DD099 /* Safekoin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2607F60227E49CE000DD099 /* Build configuration list for PBXNativeTarget "Safekoin" */;
+			buildPhases = (
+				53B5B1FB730FEDB786AF85CE /* [CP] Check Pods Manifest.lock */,
+				D2607F3C227E49CB000DD099 /* Sources */,
+				D2607F3D227E49CB000DD099 /* Frameworks */,
+				D2607F3E227E49CB000DD099 /* Resources */,
+				5751830542A71F7A54B97F9F /* [CP] Embed Pods Frameworks */,
+				33BFA6ED71AAAF68C1719D80 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Safekoin;
+			productName = Safekoin;
+			productReference = D2607F40227E49CB000DD099 /* Safekoin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D2607F56227E49CE000DD099 /* SafekoinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2607F63227E49CE000DD099 /* Build configuration list for PBXNativeTarget "SafekoinTests" */;
+			buildPhases = (
+				D2607F53227E49CE000DD099 /* Sources */,
+				D2607F54227E49CE000DD099 /* Frameworks */,
+				D2607F55227E49CE000DD099 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2607F59227E49CE000DD099 /* PBXTargetDependency */,
+			);
+			name = SafekoinTests;
+			productName = SafekoinTests;
+			productReference = D2607F57227E49CE000DD099 /* SafekoinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D2607F38227E49CB000DD099 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Nwabueze Chukwunyere";
+				TargetAttributes = {
+					D2607F3F227E49CB000DD099 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					D2607F56227E49CE000DD099 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = D2607F3F227E49CB000DD099;
+					};
+				};
+			};
+			buildConfigurationList = D2607F3B227E49CB000DD099 /* Build configuration list for PBXProject "Safekoin" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D2607F37227E49CB000DD099;
+			productRefGroup = D2607F41227E49CB000DD099 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2607F3F227E49CB000DD099 /* Safekoin */,
+				D2607F56227E49CE000DD099 /* SafekoinTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D2607F3E227E49CB000DD099 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2607F8A227FA9BE000DD099 /* GoogleService-Info.plist in Resources */,
+				D2607F51227E49CE000DD099 /* LaunchScreen.storyboard in Resources */,
+				D2607F4E227E49CE000DD099 /* Assets.xcassets in Resources */,
+				D2607F49227E49CB000DD099 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2607F55227E49CE000DD099 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33BFA6ED71AAAF68C1719D80 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Safekoin/Pods-Safekoin-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAnonymousAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseEmailAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAnonymousAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseEmailAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Safekoin/Pods-Safekoin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53B5B1FB730FEDB786AF85CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Safekoin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5751830542A71F7A54B97F9F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Safekoin/Pods-Safekoin-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Safekoin/Pods-Safekoin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2607F3C227E49CB000DD099 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2607F73227E4FE8000DD099 /* SafekoinService.swift in Sources */,
+				D2607F6A227E4AB3000DD099 /* Safekoin.swift in Sources */,
+				D2607F7B227E5204000DD099 /* ViewModel.swift in Sources */,
+				D20A060E228354DA005AD098 /* SafekoinTableViewCell.swift in Sources */,
+				D2607F44227E49CB000DD099 /* AppDelegate.swift in Sources */,
+				D2607F75227E508E000DD099 /* NomicsAPI.swift in Sources */,
+				D2607F6C227E4BA9000DD099 /* SafekoinViewController.swift in Sources */,
+				D212DAEF228595B70014A6E1 /* DetailViewController.swift in Sources */,
+				D2607F7F227E5299000DD099 /* HomeViewController.swift in Sources */,
+				D2607F4C227E49CB000DD099 /* Safekoin.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2607F53227E49CE000DD099 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D2607F59227E49CE000DD099 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2607F3F227E49CB000DD099 /* Safekoin */;
+			targetProxy = D2607F58227E49CE000DD099 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D2607F47227E49CB000DD099 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2607F48227E49CB000DD099 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D2607F4F227E49CE000DD099 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2607F50227E49CE000DD099 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D2607F5E227E49CE000DD099 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D2607F5F227E49CE000DD099 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D2607F61227E49CE000DD099 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35C7A429A1E378886484AF57 /* Pods-Safekoin.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N464JNLPP4;
+				INFOPLIST_FILE = Safekoin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mac.Safekoin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D2607F62227E49CE000DD099 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 553334EB660E5C433887BACD /* Pods-Safekoin.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N464JNLPP4;
+				INFOPLIST_FILE = Safekoin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mac.Safekoin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D2607F64227E49CE000DD099 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SafekoinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mac.SafekoinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Safekoin.app/Safekoin";
+			};
+			name = Debug;
+		};
+		D2607F65227E49CE000DD099 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SafekoinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mac.SafekoinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Safekoin.app/Safekoin";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D2607F3B227E49CB000DD099 /* Build configuration list for PBXProject "Safekoin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2607F5E227E49CE000DD099 /* Debug */,
+				D2607F5F227E49CE000DD099 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2607F60227E49CE000DD099 /* Build configuration list for PBXNativeTarget "Safekoin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2607F61227E49CE000DD099 /* Debug */,
+				D2607F62227E49CE000DD099 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2607F63227E49CE000DD099 /* Build configuration list for PBXNativeTarget "SafekoinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2607F64227E49CE000DD099 /* Debug */,
+				D2607F65227E49CE000DD099 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D2607F4A227E49CB000DD099 /* Safekoin.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D2607F4B227E49CB000DD099 /* Safekoin.xcdatamodel */,
+			);
+			currentVersion = D2607F4B227E49CB000DD099 /* Safekoin.xcdatamodel */;
+			path = Safekoin.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D2607F38227E49CB000DD099 /* Project object */;
+}

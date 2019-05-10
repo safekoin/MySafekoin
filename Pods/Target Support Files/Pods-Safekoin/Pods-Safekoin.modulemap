@@ -1,0 +1,6 @@
+framework module Pods_Safekoin {
+  umbrella header "Pods-Safekoin-umbrella.h"
+
+  export *
+  module * { export * }
+}
