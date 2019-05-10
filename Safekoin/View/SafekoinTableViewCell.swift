@@ -17,6 +17,11 @@ class SafekoinTableViewCell: UITableViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     static let identifier = "Cell"
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        selectionStyle = .none
+    }
+    
     func searchConfigure(with trades: Trade) {
         
         currencyLabel.text = trades.currency

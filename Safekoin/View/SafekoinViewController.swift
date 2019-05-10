@@ -17,7 +17,6 @@ class SafekoinViewController: UIViewController {
     
     var searchController = UISearchController(searchResultsController: nil)
     let viewModel = ViewModel()
-    var updateCollection = false
     
     
     override func viewDidLoad() {
@@ -44,24 +43,13 @@ class SafekoinViewController: UIViewController {
     
     func createSearchBar() {
         searchController.searchBar.placeholder = "Search Currency"
-        searchController.definesPresentationContext = false
+        searchController.definesPresentationContext = true
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchResultsUpdater = self
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController = searchController
-        
-    func filterTrades(with search: String) {
-            viewModel.myTrades = viewModel.myTrades.filter({$0.currency.lowercased().contains(search.lowercased()) || $0.price.lowercased().contains(search.lowercased())})
-            updateCollection = true
-         SafekoinTableView.reloadData()
-        }
-        
-       
-        }
-    private func isFiltering() -> Bool {
-        return searchController.isActive && !searchController.searchBar.text!.isEmpty
-        
     
+        
     }
 
 }
@@ -80,8 +68,11 @@ extension SafekoinViewController: UISearchResultsUpdating {
     
     
     func updateSearchResults(for searchController: UISearchController) {
+        let searchText = searchController.searchBar.text!
+        viewModel.filterTrades(with: searchText)
         
-        viewModel.get()
+        
+       // viewModel.get()
 }
     
 }
@@ -91,14 +82,16 @@ extension SafekoinViewController: UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
         return viewModel.myTrades.count
-    }
     
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: SafekoinTableViewCell.identifier, for: indexPath) as! SafekoinTableViewCell
         
         
         let trade = viewModel.myTrades[indexPath.row]
+        
         
         cell.searchConfigure(with: trade)
         
@@ -106,21 +99,15 @@ extension SafekoinViewController: UITableViewDataSource {
         return cell
     }
 }
-    
 
 extension SafekoinViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 187
         
-      
-        
-}
+      }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
-        tableView.deselectRow(at: indexPath, animated: true)
-        
         
         let trade = viewModel.myTrades[indexPath.row]
         
