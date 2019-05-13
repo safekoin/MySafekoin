@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import CoreData
 import FirebaseAuth
+import TwitterKit
 
 
 
@@ -22,8 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        TWTRTwitter.sharedInstance().start(withConsumerKey:"DFp8Prd65hMDORmZfQ9zV7nng",
+                                           consumerSecret:"ptxdeKh0QHCZ7MiwN4OWrqRYXajXZnERnK1FACsbpwerz0s1TK")
+        
         
         return true
+    }
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return TWTRTwitter.sharedInstance().application(app, open: url, options: options)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

@@ -11,12 +11,10 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var currencyLabel: UILabel!
-   
     @IBOutlet weak var priceLabel: UILabel!
     
     var currency: String!
     var price: String!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +23,11 @@ class DetailViewController: UIViewController {
         priceLabel.text = price
         
     }
+    @IBAction func buySellTapped(_ sender: Any) {
+        
+      
+        let webVC = storyboard?.instantiateViewController(withIdentifier: "WebViewController") as! WebViewController
+        self.navigationController?.pushViewController(webVC, animated: true)
+    }
     
-
-    
-
 }

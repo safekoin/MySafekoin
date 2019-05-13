@@ -23,34 +23,30 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="CIR-Ao-5f5">
-                                <rect key="frame" x="92.5" y="386" width="174" height="202"/>
+                                <rect key="frame" x="92.5" y="386" width="174" height="119"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2I-Yz-3Yw">
-                                        <rect key="frame" x="48.5" y="0.0" width="77" height="36"/>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
-                                        <state key="normal" title="Sign Up"/>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZW-Yc-WVr">
-                                        <rect key="frame" x="57" y="83" width="60" height="36"/>
+                                        <rect key="frame" x="16.5" y="0.0" width="141" height="36"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
-                                        <state key="normal" title="Log in"/>
+                                        <state key="normal" title="Log in/Sign Up"/>
                                         <connections>
                                             <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1vA-ow-VPc"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGK-Re-saI">
-                                        <rect key="frame" x="0.0" y="166" width="174" height="36"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGK-Re-saI" userLabel="Twitter Button" customClass="TWTRLogInButton">
+                                        <rect key="frame" x="0.0" y="83" width="174" height="36"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
                                         <state key="normal" title="Login with Twitter"/>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.80381982872948321" blue="0.32656256382450899" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="twitterButton" destination="gGK-Re-saI" id="3iG-An-Zls"/>
                         <segue destination="Xi5-E7-pm1" kind="show" identifier="goHome" id="vYj-dA-fxy"/>
                     </connections>
                 </viewController>
@@ -69,7 +65,8 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BbQ-np-sWP">
                                 <rect key="frame" x="5" y="144" width="404" height="691"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="1" green="0.89762856951151604" blue="0.38347695833833773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexBackgroundColor" red="0.97012311220169067" green="0.54820092863452052" blue="0.45540812179796886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="187" id="fs2-wu-Kxz" customClass="SafekoinTableViewCell" customModule="Safekoin" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="404" height="187"/>
@@ -102,6 +99,7 @@
                                                 <constraint firstItem="CbC-eX-ZiE" firstAttribute="leading" secondItem="tUV-yK-2Pg" secondAttribute="leading" constant="20" id="p8P-lq-0jQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.23142087171643955" green="0.70297818379993182" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="CbC-eX-ZiE" secondAttribute="bottom" constant="46" id="Mhh-eS-dfm"/>
                                         </constraints>
@@ -121,7 +119,13 @@
                         <viewLayoutGuide key="safeArea" id="fyX-5E-SaB"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="5qZ-lW-s28"/>
+                    <navigationItem key="navigationItem" id="5qZ-lW-s28">
+                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="Qqz-t7-LmM">
+                            <connections>
+                                <action selector="signoutTapped:" destination="wgt-FA-v9p" id="h3Y-05-iZb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="SafekoinTableView" destination="BbQ-np-sWP" id="EUL-LU-KFv"/>
@@ -140,7 +144,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Sow-3V-cWI">
-                                <rect key="frame" x="139" y="348" width="80" height="98"/>
+                                <rect key="frame" x="139" y="348" width="80" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKU-5G-JWc">
@@ -149,16 +153,26 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFL-cI-iSD">
-                                        <rect key="frame" x="0.0" y="74" width="80" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFL-cI-iSD">
+                                <rect key="frame" x="139" y="422" width="199" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8H-R8-PjH">
+                                <rect key="frame" x="117" y="478" width="99" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Buy/Sell"/>
+                                <connections>
+                                    <action selector="buySellTapped:" destination="aJU-Rh-ZgI" eventType="touchUpInside" id="diD-fz-AWm"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.88666910765437701" green="0.99705451726913452" blue="0.57705068267809834" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="sNP-pw-4ou"/>
                     </view>
                     <connections>
@@ -170,10 +184,46 @@
             </objects>
             <point key="canvasLocation" x="3368.115942028986" y="26.785714285714285"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="jxz-cB-KRW">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="Dct-x2-DVa" customClass="WebViewController" customModule="Safekoin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HxP-be-etk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="lhl-aW-qh6">
+                                <rect key="frame" x="134" y="259" width="122" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Hwj-qd-5NE" userLabel="Activity Indicator">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOADING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcX-QG-NUg">
+                                        <rect key="frame" x="43" y="0.0" width="79" height="20"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="3zW-Db-Lfc"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Hwj-qd-5NE" id="oyP-UJ-AcV"/>
+                        <outlet property="loadingView" destination="jcX-QG-NUg" id="sY5-SQ-kqx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hps-ea-ExI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4271" y="27"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="9Hy-am-7ip">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xi5-E7-pm1" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Xi5-E7-pm1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="elM-y3-KWg">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

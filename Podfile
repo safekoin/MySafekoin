@@ -15,6 +15,6 @@ target 'Safekoin' do
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'FirebaseUI'
-
+  pod 'TwitterKit'
  
 end

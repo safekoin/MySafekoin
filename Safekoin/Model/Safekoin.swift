@@ -11,7 +11,6 @@ import FirebaseDatabase
 
 class Trade: Decodable{
     
-   
     let currency: String
     let price: String
     

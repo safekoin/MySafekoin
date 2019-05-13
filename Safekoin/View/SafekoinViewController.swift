@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 
 class SafekoinViewController: UIViewController {
     
@@ -26,20 +26,16 @@ class SafekoinViewController: UIViewController {
         viewModel.get()
         viewModel.delegate = self
         
-        
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         searchController.isActive = false
     }
-    
     deinit {
         print("Search View Controller has deallocated")
     }
-    
-    
     
     func createSearchBar() {
         searchController.searchBar.placeholder = "Search Currency"
@@ -49,9 +45,31 @@ class SafekoinViewController: UIViewController {
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController = searchController
     
+    }
+    
+    @IBAction func signoutTapped(_ sender: UIBarButtonItem) {
+        
+        let firebaseAuth = Auth.auth()
+        
+        do {
+            
+            try firebaseAuth.signOut()
+            
+        } catch {
+            
+            print ("Error signing out: \(error.localizedDescription)")
+        }
+        
+        goToLogin()
+    }
+    
+    func goToLogin() {
+        let homeVC = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        
+        present(homeVC,animated: true, completion: nil)
         
     }
-
+    
 }
 
 extension SafekoinViewController: ViewModelDelegate {
@@ -66,35 +84,27 @@ extension SafekoinViewController: ViewModelDelegate {
 }
 extension SafekoinViewController: UISearchResultsUpdating {
     
-    
     func updateSearchResults(for searchController: UISearchController) {
         let searchText = searchController.searchBar.text!
         viewModel.filterTrades(with: searchText)
         
-        
-       // viewModel.get()
+       
 }
     
 }
 extension SafekoinViewController: UITableViewDataSource {
     
-    
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
         return viewModel.myTrades.count
-    
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: SafekoinTableViewCell.identifier, for: indexPath) as! SafekoinTableViewCell
         
-        
         let trade = viewModel.myTrades[indexPath.row]
-        
-        
+
         cell.searchConfigure(with: trade)
-        
         
         return cell
     }
@@ -111,12 +121,10 @@ extension SafekoinViewController: UITableViewDelegate {
         
         let trade = viewModel.myTrades[indexPath.row]
         
-        
         let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         
         detailVC.currency = trade.currency
         detailVC.price = trade.price
-        
         
         self.navigationController?.pushViewController(detailVC, animated: true)
         
