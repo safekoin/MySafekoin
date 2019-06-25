@@ -12,7 +12,6 @@ import Firebase
 class SafekoinViewController: UIViewController {
     
     
-    
     @IBOutlet weak var SafekoinTableView: UITableView!
     
     var searchController = UISearchController(searchResultsController: nil)
@@ -87,9 +86,7 @@ extension SafekoinViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         let searchText = searchController.searchBar.text!
         viewModel.filterTrades(with: searchText)
-        
-       
-}
+  }
     
 }
 extension SafekoinViewController: UITableViewDataSource {
@@ -127,7 +124,7 @@ extension SafekoinViewController: UITableViewDelegate {
         detailVC.price = trade.price
         
         self.navigationController?.pushViewController(detailVC, animated: true)
-        
+      
 }
 
 }

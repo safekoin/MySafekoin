@@ -17,7 +17,6 @@ class WebViewController: UIViewController {
     
     var webView = WKWebView()
     
-    
     override func loadView() {
         super.loadView()
         
@@ -27,7 +26,6 @@ class WebViewController: UIViewController {
         self.webView.bringSubviewToFront(loadingView)
         
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,18 +42,12 @@ class WebViewController: UIViewController {
         webView.load(request)
         
     }
-    
-    
-   
-    
-} //end class
+}
 
 extension WebViewController: WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         loadingView.isHidden = true
-        
     }
-    
 }
 
